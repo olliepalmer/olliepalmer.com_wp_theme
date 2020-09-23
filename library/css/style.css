@@ -92,6 +92,18 @@ video {
     list-style: none;
 }
 
+.credits h3 {
+    border: 0px;
+    padding: 0px;
+    margin-bottom: 0px;
+    font-size: 0.8em;
+}
+
+.exhibition p, .credits p, .press p, .exhibition ul, .credits ul, .press ul {
+    margin-left: 2.5em;
+    font-size: 0.8em;
+}
+
 /**
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
@@ -856,6 +868,9 @@ them however you see fit.
 
     folio_image {
         min-height: 400px;
+    }
+    .nav li a:hover, .nav li a:focus, .nav li a:hover {
+    padding-bottom: 5px;
     }
 }
 
@@ -1761,7 +1776,7 @@ POSTS & CONTENT STYLES
 
 .hentry footer {
     padding: 1.5em;
-    border: none;
+    border-bottom: 1px solid #888;
 }
 
 .hentry footer p {
@@ -1770,9 +1785,22 @@ POSTS & CONTENT STYLES
 }
 
 footer.article-footer {
-    background: #e5e5e5;
+    background: none; /* was #e5e5e5; */
     margin-top: 1.5em;
+    text-align: right;
+    color: red;
 }
+
+footer.article-footer a {
+    color: red;
+    border-bottom: 1px solid red;
+}
+
+footer.article-footer a:hover {
+    color: white;
+    background: red;
+}
+
 
 /* end .hentry */
 .single-title,
@@ -2243,18 +2271,18 @@ tweeners.
     /******************************************************************
                               Site Name:
                               Author:
-                              
+
                               Stylesheet: 481px and Up Stylesheet
-                              
+
                               This stylesheet is loaded for larger devices. It's set to
                               481px because at 480px it would load on a landscaped iPhone.
                               This isn't ideal because then you would be loading all those
                               extra styles on that same mobile connection.
-                              
+
                               A word of warning. This size COULD be a larger mobile device,
                               so you still want to keep it pretty light and simply expand
                               upon your base.scss styles.
-                              
+
                               ******************************************************************/
     /*
                               IMPORTANT NOTE ABOUT SASS 3.3 & UP
@@ -2338,15 +2366,15 @@ you can add resource intensive styles.
     /******************************************************************
                               Site Name:
                               Author:
-                              
+
                               Stylesheet: Tablet & Small Desktop Stylesheet
-                              
+
                               Here's where you can start getting into the good stuff.
                               This size will work on iPads, other tablets, and desktops.
                               So you can start working with more styles, background images,
                               and other resources. You'll also notice the grid starts to
                               come into play. Have fun!
-                              
+
                               ******************************************************************/
     /*********************
                               GENERAL STYLES
@@ -2528,12 +2556,12 @@ you can add resource intensive styles.
     /******************************************************************
                               Site Name:
                               Author:
-                              
+
                               Stylesheet: Desktop Stylsheet
-                              
+
                               This is the desktop size. It's larger than an iPad so it will only
                               be seen on the Desktop.
-                              
+
                               ******************************************************************/
     .wrap {
         width: 1040px;
@@ -2546,14 +2574,14 @@ This is for the larger monitors and possibly full screen viewers.
 *********************/
 @media only screen and (min-width: 1240px) {
     /******************************************************************
-                              Site Name: 
-                              Author: 
-                              
+                              Site Name:
+                              Author:
+
                               Stylesheet: Super Large Monitor Stylesheet
-                              
+
                               You can add some advanced styles here if you like. This kicks in
                               on larger screens.
-                              
+
                               ******************************************************************/
 }
 
@@ -2565,44 +2593,44 @@ query for retina AND a certain size if you want. Go Nuts.
 *********************/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     /******************************************************************
-                              Site Name: 
-                              Author: 
-                              
+                              Site Name:
+                              Author:
+
                               Stylesheet: Retina Screens & Devices Stylesheet
-                              
+
                               When handling retina screens you need to make adjustments, especially
                               if you're not using font icons. Here you can add them in one neat
                               place.
-                              
+
                               ******************************************************************/
-    /* 
-                              
-                              EXAMPLE 
+    /*
+
+                              EXAMPLE
                               Let's say you have an image and you need to make sure it looks ok
                               on retina screens. Let's say we have an icon which dimension are
                               24px x 24px. In your regular stylesheets, it would look something
                               like this:
-                              
+
                               .icon {
                                 width: 24px;
                                 height: 24px;
                                 background: url(img/test.png) no-repeat;
                               }
-                              
+
                               For retina screens, we have to make some adjustments, so that image
                               doesn't look blurry. So, taking into account the image above and the
                               dimensions, this is what we would put in our retina stylesheet:
-                              
+
                               .icon {
                                 background: url(img/test@2x.png) no-repeat;
                                 background-size: 24px 24px;
                               }
-                              
-                              So, you would create the same icon, but at double the resolution, meaning 
+
+                              So, you would create the same icon, but at double the resolution, meaning
                               it would be 48px x 48px. You'd name it the same, but with a @2x at the end
                               (this is pretty standard practice). Set the background image so it matches
-                              the original dimensions and you are good to go. 
-                              
+                              the original dimensions and you are good to go.
+
                               */
 }
 
@@ -2616,13 +2644,13 @@ be set to display none.
     /******************************************************************
                               Site Name:
                               Author:
-                              
+
                               Stylesheet: Print Stylesheet
-                              
+
                               This is the print stylesheet. There's probably not a lot
                               of reasons to edit this stylesheet. If you want to
                               though, go for it.
-                              
+
                               ******************************************************************/
     * {
         background: transparent !important;
