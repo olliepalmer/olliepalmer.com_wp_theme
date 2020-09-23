@@ -104,6 +104,9 @@ video {
     font-size: 0.8em;
 }
 
+.wp-caption {
+  margin-bottom: 1em;
+}
 /**
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
