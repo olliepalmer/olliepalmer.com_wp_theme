@@ -100,7 +100,7 @@ video {
 }
 
 .exhibition p, .credits p, .press p, .exhibition ul, .credits ul, .press ul {
-    margin-left: 2.5em;
+    margin-left: 2.5em !important;
     font-size: 0.8em;
 }
 
